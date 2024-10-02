@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+
 from app.routers import slides, admin
 from app.config.settings import settings
 

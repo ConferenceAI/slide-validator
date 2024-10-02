@@ -1,6 +1,7 @@
 from fastapi import APIRouter, UploadFile, File, Form
-from app.services import file_handler, deterministic_checks, ai_checks
+
 from app.models.slide_deck import SlideDeck
+from app.services import file_handler, deterministic_checks, ai_checks
 
 router = APIRouter(
     prefix="/slides",
