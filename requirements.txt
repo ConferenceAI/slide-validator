@@ -15,4 +15,7 @@ pikepdf
 PyMuPDF
 fontTools
 reportlab
-bs4
+openai
+anthropic
+transformers
+torch

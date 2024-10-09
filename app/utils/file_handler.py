@@ -2,8 +2,6 @@ import os
 import magic
 import aiohttp
 from io import BytesIO
-
-from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 
 from fastapi import UploadFile

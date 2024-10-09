@@ -42,6 +42,9 @@ The app is divided into several components:
 * **app/utils/file_handler.py**: To analyze specific file formats and conversions required.
 * **app/utils/deterministic_checks.py**: Implements deterministic validation checks on slide decks.
 * **app/utils/probabilistic_checks.py**: Implements AI-powered checks on slide content and structure.
+* **app/services/openai.py**: To integrate with OpenAI APIs
+* **app/services/anthropic.py**: To integrate with Anthropic APIs
+* **app/services/huggingface.py**: To integrate with HuggingFace APIs
 
 ## Development
 

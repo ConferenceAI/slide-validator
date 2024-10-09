@@ -29,12 +29,19 @@ async def validate_slide_deck(file: UploadFile = File(None),
         probabilistic_results = await probabilistic_checks.run_checks(slide_deck)
 
         # Combine results
-        all_results = {**deterministic_results, **probabilistic_results}
+        all_checks = {**deterministic_results, **probabilistic_results}
 
         validation_response = {
-            "results": all_results,
-            "all_passed": all(all_results.values()),
-            "slide_deck": str(slide_deck)
+            "validation": all(all_checks.values()),
+            "checks": all_checks,
+            "meta": {   
+                "file_format": slide_deck.file_format,
+                "file_size (KB)": round(slide_deck.file_size / (1024), 2),
+                "slide_count": slide_deck.slide_count,
+                "image_count": slide_deck.image_count,
+                "audio_count": slide_deck.audio_count,
+                "video_count": slide_deck.video_count,
+            },
         }
         print(validation_response)
         return validation_response
